@@ -1,10 +1,9 @@
 services:
   runner:
-    image: ghcr.io/youssefbrr/self-hosted-runner:latest-arm64
     # Uncomment to build locally instead of pulling from GHCR
-    # build: .
+    build: .
     platform: linux/arm64
-    restart: always
+    restart: unless-stopped
     env_file:
       - ../../.env
     volumes:
@@ -25,8 +24,8 @@ services:
       replicas: 1
       resources:
         limits:
-          cpus: "1"
-          memory: 1G
+          cpus: "4"
+          memory: 6G
         reservations:
           cpus: "0.5"
           memory: 512M

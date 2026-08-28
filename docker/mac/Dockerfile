@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     openssh-client \
     build-essential \
+    libopenblas-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Add runner user to docker group and allow GID fix at startup

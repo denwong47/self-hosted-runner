@@ -19,6 +19,8 @@ CONFIG_ARGS="--url https://github.com/${REPO} --token ${REG_TOKEN} --name ${NAME
 [ "${EPHEMERAL}" = "true" ]            && CONFIG_ARGS="${CONFIG_ARGS} --ephemeral"
 [ "${DISABLE_AUTO_UPDATE}" = "true" ]  && CONFIG_ARGS="${CONFIG_ARGS} --disableupdate"
 
+echo ${CONFIG_ARGS}
+
 ./config.sh ${CONFIG_ARGS}
 
 cleanup() {
