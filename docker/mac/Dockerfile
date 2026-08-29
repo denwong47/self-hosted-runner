@@ -20,6 +20,8 @@ RUN apt-get update && apt-get install -y \
     openssh-client \
     build-essential \
     libopenblas-dev \
+    libpq-dev \
+    cmake \
     && rm -rf /var/lib/apt/lists/*
 
 # Add runner user to docker group and allow GID fix at startup
